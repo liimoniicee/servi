@@ -3,4 +3,4 @@ Pagina dirigida a departamento de servicio social
 
 
 link:
-https://github.com/rogersanlug477/web-SS.git
+git@github.com:rogersanlug477/web-SS.git
