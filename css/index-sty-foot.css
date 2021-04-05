@@ -1,0 +1,21 @@
+/*---------------------------------Seccion footer*/
+.footer-fullwidth {
+border-top: 20px solid #0B231E;
+background-color: #0B231E;
+background-image: url(https://framework-gb.cdn.gob.mx/landing/img/fondofooter.jpg);
+}
+.footer-1 {
+  border: 0;
+  text-shadow: 1px 1px 0 rgb(0 0 0 / 10%);
+}
+.footer-1 {
+  background: transparent;
+  color: #999999;
+}
+.footer-fullwidth .foo-container {
+  background: none;
+}
+.foo-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
