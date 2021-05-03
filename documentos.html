@@ -13,6 +13,7 @@
   <body>
     <!---primer menu-->
     <nav class="navbar navbar-expand-sm " style="background-color: #0B231E">
+      <div class="container ms-3">
       <a href="#" class="navbar-brand mb-0 h1"></a>
         <img class="d-inline-block align-top" src="imag/logo.png" width="80" height="30" alt="">
 
@@ -21,7 +22,7 @@
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
         class="navbar-toggler"
-        aria-controls="navbarNav"
+        aria-controls="navbarNav1"
         arial-expanded="false"
         arial-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,6 +43,7 @@
              <img class="d-inline-block align-top" src="imag/lupa.png" width="30" height="30" alt="">
            </ul>
          </div>
+       </div>
        </nav>
 
 <!--imagen banner-->
@@ -55,10 +57,10 @@
 
 <!--segundo menu-->
   <nav class="navbar navbar-expand-sm" style="background-color: #18396a">
-    <div class="container">
+    <div class="container ms-3 me-2">
     <a href="#" class="navbar-brand mb-0 h1"></a>
 
-    <button type="button_1"
+    <button type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNav"
       class="navbar-toggler"
@@ -68,27 +70,25 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse tab-content" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
           <a href="#" class="nav-link active text-white">Menu</a>
         </li>
         <li class="nav-item active">
-          <a href="#" class="nav-link text-white">Documentos</a>
+          <a href="documentos.html" class="nav-link text-white">Documentos</a>
         </li>
         <li class="nav-item active">
-          <a href="#" class="nav-link text-white">Documentos Completos</a>
+          <a href="documentos-completos.html" class="nav-link text-white">Documentos Completos</a>
         </li>
         <li class="nav-item active">
-          <a href="#" class="nav-link text-white">Contactos</a>
+          <a href="contactos.html" class="nav-link text-white">Contactos</a>
         </li>
        </ul>
        <form class="d-flex ms-auto">
-         <input type="text" class="form-control me-2">
-         <button type="submit" class="btn" style="background-color: #2d85cf">Buscar</button>
+         <a class="btn" style="background-color: #2d85cf" href="perfil.html" role="btn">Perfil</a>
        </form>
      </div>
-
     </div>
    </nav>
 
@@ -117,8 +117,8 @@
      </div>
    </div>
 
-<!--Footer-1-->
-<footer class="bg-secondary text-center text-lg-start">
+<!--+++++++++++++++++++++++++++++++++++++++++Footer-1-->
+<footer class="bg-secondary text-center text-lg-start p-5">
   <!-- Grid container -->
   <div class="container p-4">
     <!--Grid row-->
@@ -128,9 +128,13 @@
         <h5 class="text-uppercase">Footer Content</h5>
 
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-          voluptatem veniam, est atque cumque eum delectus sint!
+          Dirección
+
+          Blvd. Tecnológico de Los Cabos s/n, Col. Guaymitas, CP 23407
+
+          San José del Cabo, B.C.S.
+
+          Tels: 624 142 5939 /163 22 50 ext. 2001
         </p>
       </div>
       <!--Grid column-->
@@ -182,9 +186,8 @@
   <!-- Grid container -->
 </footer>
 
-
-<!-- Footer-2 -->
-<footer class="bg-secondary text-center text-lg-start mt-3">
+<!--++++++++++++++++++++++++++++++++++Footer-2-->
+<div class="bg-secondary text-center text-lg-start p-5 mt-3">
   <!-- Grid container -->
   <div class="container p-4">
     <!--Grid row-->
@@ -194,9 +197,13 @@
         <h5 class="text-uppercase">Footer Content</h5>
 
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-          voluptatem veniam, est atque cumque eum delectus sint!
+          Dirección
+
+          Blvd. Tecnológico de Los Cabos s/n, Col. Guaymitas, CP 23407
+
+          San José del Cabo, B.C.S.
+
+          Tels: 624 142 5939 /163 22 50 ext. 2001
         </p>
       </div>
       <!--Grid column-->
@@ -246,6 +253,7 @@
     <!--Grid row-->
   </div>
   <!-- Grid container -->
+</footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
