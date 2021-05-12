@@ -12,11 +12,30 @@
   </head>
 
   <body>
-    <style media="screen">
+<!--imagene fondo de toda la pagina-->
+    <div class="bg-image"
+style="background-image: url('imag/bg_eadites1.jpg');
+      ">
 
-    </style>
+    <div class="container-sm mb-5">
+        <ul class="row">
+         <div class="col-sm m-auto ms-1 text-center">
+           <img href="#" src="imag/pleca-gob1.png" width="250" height="75" class="img-fluid" alt="">
+           </div>
+           <div class="col-sm m-auto ms-1 me-1 text-center">
+             <img href="#" src="imag/pleca-gob2.png" width="251" height="75" class="img-fluid me-5" alt="">
+             </div>
+             <div class="col-sm m-auto ms-1 me-1 text-center">
+               <img href="#" src="imag/pleca_tecnm.jpg" width="163" height="75" class="img-fluid me-5" alt="">
+               </div>
+               <div class="col-sm m-auto ms-1 me-1 text-center">
+                 <img href="#" src="imag\pleca-ites2.png" width="213" height="75" class="img-fluid me-5" alt="">
+                 </div>
+        </ul>
+      </div>
 
     <section>
+      <div class="container">
       <div class="row g-0">
         <div class="col-lg-7 d-lg-block">
           <!--carrusel-->
@@ -58,15 +77,16 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          <!-- Botón de Invitado -->
           <div class="mt-3 d-flex justify-content-around">
-            <button class="btn btn-lg btn-outline-primary flex-grow-1 mx-4">Invitado</button>
+          <a class="btn btn-lg flex-grow-1 mx-4" style="background-color: #1948B5;" href="invitado.html" role="btn">Invitado</a>
           </div>
           </div>
 
           <!--login-->
           <div class="col-lg-5 d-flex flex-column align-items-end min-vh-100">
             <div class="text-center px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
-              <img src="imag/sslog.jpeg"  class="img-fluid" alt="">
+              <img src="imag/sslog.png"  class="img-fluid" alt="">
             </div>
             <div class="px-lg-5 pt-lg-4 p-4 w-100 align-self-center">
                 <h1 class="text-center mb-5 font-weight-normal">Inicio de sesion</h1>
@@ -78,8 +98,10 @@
                     <input type="password" id="password" placeholder="Contraseña" class="form-control">
                   </div>
                   <div class="mt-3 d-flex justify-content-around">
-                    <button class="btn btn-lg btn-outline-primary flex-grow-1 mx-4">Ingresar</button>
-                    <button  class="btn btn-lg btn-outline-secondary flex-grow-1 mx-2">Registrarse</button>
+                    <!-- Botón para loggearse -->
+                    <a class="btn btn-lg btn-outline-primary flex-grow-1 mx-4" href="menu.html" role="btn">Ingresar</a>
+                    <!-- Botón para registrarse -->
+                    <a  class="btn btn-lg btn-outline-secondary flex-grow-1 mx-2"  href="registro.php" role="btn">Registrarse</a>
                   </div>
                 </form>
                 <div class="text-center mt-4 p-5 w-100 mt-auto">
@@ -87,7 +109,10 @@
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+    </section>
+</div>
 
 
 

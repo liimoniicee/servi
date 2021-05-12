@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-  <title>Login</title>
+  <title>Registro</title>
 
   <!-- Canonical SEO -->
 
@@ -97,7 +97,7 @@
     </div>
 
 </br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Registro</button>
   </form>
                   	</div>
                     	</div>
