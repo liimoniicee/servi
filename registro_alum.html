@@ -61,6 +61,10 @@ style="background-image: url('imag/bg_eadites1.jpg');
                 <input type="text" name="apem" class="form-control" id="apem" placeholder="Apellido materno">
               </div>
               <div class="form-group mb-3">
+                <label for="apem">Celular</label>
+                <input type="number" name="cel" class="form-control" id="cel" placeholder="Numero de celular">
+              </div>
+              <div class="form-group mb-3">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
               </div>
@@ -75,7 +79,7 @@ style="background-image: url('imag/bg_eadites1.jpg');
             </div>
             <div class="form-group mb-3">
               <label for="sem">Semestre</label>
-              <input type="text" name="sem" class="form-control" id="sem" placeholder="Semestre">
+              <input type="number" name="sem" class="form-control" id="sem" placeholder="Semestre">
             </div>
             <div class="form-group mb-3">
               <label for="nc">Numero de control</label>
@@ -83,12 +87,12 @@ style="background-image: url('imag/bg_eadites1.jpg');
             </div>
             <div class="form-group">
               <label for="peri">Periodo</label>
-              <input type="text" name="periodo" class="form-control" id="peri" placeholder="Periodo">
+              <input type="number" name="periodo" class="form-control" id="peri" placeholder="Periodo">
             </div>
 
           <div class="mt-5 d-flex p-4 justify-content-around">
             <button type="submit" class="btn btn-lg btn-outline-primary">Registrar</button>
-            <button type="" class="btn btn-lg btn-outline-danger">Salir</button>
+            <input type="button" value="Salir" class="btn btn-lg btn-outline-danger" OnClick="location.href='index.html' ">
           </div>
               </form>
         </div>

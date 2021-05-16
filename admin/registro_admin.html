@@ -50,30 +50,34 @@ style="background-image: url('../imag/bg_eadites1.jpg');
               <h3 class="text-center mb-5">Datos personales<hr></h3>
               <div class="form-group mb-3">
                 <label for="Nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                <input type="text" name="nom" class="form-control" placeholder="Nombre">
               </div>
               <div class="form-group mb-3">
                 <label for="apep">Apellido paterno</label>
-                <input type="text" class="form-control" id="apep" placeholder="Apellido paterno">
+                <input type="text" name="apep" class="form-control"  placeholder="Apellido paterno">
               </div>
               <div class="form-group mb-3">
                 <label for="apem">Apellido materno</label>
-                <input type="text" class="form-control" id="apem" placeholder="Apellido materno">
+                <input type="text" name="apem" class="form-control"  placeholder="Apellido materno">
+              </div>
+              <div class="form-group mb-3">
+                <label for="cel">Celular</label>
+                <input type="number" name="cel" class="form-control" id="" aria-describedby="" placeholder="Numero celular">
               </div>
               <div class="form-group mb-3">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
               </div>
               <div class="form-group mb-5">
                 <label for="password">Contrasena</label>
-                <input type="password" class="form-control" id="pass" placeholder="Contrasena">
+                <input type="password" name="contra" class="form-control" id="pass" placeholder="Contrasena">
               </div>
-
+              <div class="mt-5 d-flex p-4 justify-content-around">
+                <button type="submit" class="btn btn-lg btn-outline-primary">Registrar</button>
+                  <input type="button" value="Salir" class="btn btn-lg btn-outline-danger" OnClick="location.href='../index.html' ">
+              </div>
           </form>
-          <div class="mt-5 d-flex p-4 justify-content-around">
-            <button type="submit" class="btn btn-lg btn-outline-primary">Registrar</button>
-            <button type="submit" class="btn btn-lg btn-outline-danger">Salir</button>
-          </div>
+
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 
 
 <?php
-include 'conexion.php';
+include '../conexion.php';
 
 
 echo "Contraseña:".$var_contraseña = $_POST['contra'];
@@ -13,11 +13,13 @@ echo "Apellido_p:".$var_apellidop = $_POST['apep'];
 echo "<br>";
 echo "Apellido Materno:".$var_apellidom = $_POST['apem'];
 echo "<br>";
+echo "Email:".$var_cel = $_POST['cel'];
+echo "<br>";
 echo "Email:".$var_email = $_POST['email'];
 
 
 
-$validar="SELECT USU_USUARIO FROM usuarios WHERE USU_USUARIO='$var_usuario' ";
+$validar="SELECT correo_sup FROM supervisor WHERE correo_sup='$var_email'";
 //if(mysqli_num_rows($nuevo_usuario)>0)
 $resultado = $conn->query($validar);
 if ($resultado->num_rows > 0){
@@ -31,8 +33,8 @@ else
 {
 
 
-$sql = "INSERT INTO usuarios (,,,)
-VALUES ('$var_usuario' , '$pass_encriptada', '1' , '$var_apellidop' , '$var_apellidom' ,'$var_nombre','$var_email')";
+$sql = "INSERT INTO supervisor (nom_sup,ape_pat_sup,ape_mat_sup,correo_sup,tel_sup,contra_sup)
+VALUES ('$var_nombre' , '$var_apellidop' , '$var_apellidom' ,'$var_email','$var_cel','$pass_encriptada')";
 
 
 
@@ -51,7 +53,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
       echo "<script>alert('No se pudo guardar correctamente, intentelo de nuevo!')</script>";
         echo "<script>window.open('registro_admin.html','_self')</script>";
-   // echo "Error: " . $sql . "<br>" . $conn->error;
+   //echo "Error: " . $sql . "<br>" . $conn->error;
 }
 $conn->close();
 }

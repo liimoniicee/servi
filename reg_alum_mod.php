@@ -13,6 +13,8 @@ echo "Apellido_p:".$var_apellidop = $_POST['apep'];
 echo "<br>";
 echo "Apellido Materno:".$var_apellidom = $_POST['apem'];
 echo "<br>";
+echo "Cel:".$var_cel = $_POST['cel'];
+echo "<br>";
 echo "Email:".$var_email = $_POST['email'];
 echo "<br>";
 echo "Carrera:".$var_carrera = $_POST['car'];
@@ -24,7 +26,7 @@ echo "<br>";
 echo "Periodo:".$var_periodo = $_POST['periodo'];
 
 
-$validar="SELECT USU_USUARIO FROM usuarios WHERE USU_USUARIO='$var_usuario' ";
+$validar="SELECT correo_alu FROM alumno WHERE correo_alu='$var_email'";
 //if(mysqli_num_rows($nuevo_usuario)>0)
 $resultado = $conn->query($validar);
 if ($resultado->num_rows > 0){
@@ -38,8 +40,8 @@ else
 {
 
 
-$sql = "INSERT INTO usuarios ()
-VALUES ('$var_usuario' , '$pass_encriptada', '1' , '$var_apellidop' , '$var_apellidom' ,'$var_nombre','$var_email','$var_carrera','$var_semestre','$var_ncontrol')";
+$sql = "INSERT INTO alumno (num_control_alu, nom_alu, ape_pat_alu, ape_mat_alu, carrera_alu, semestre_alu, periodo_alu, telefono_alu, correo_alu, contra_alu, status_alu)
+VALUES ('$var_ncontrol', '$var_nombre' , '$var_apellidop' , '$var_apellidom' ,'$var_carrera','$var_semestre','$var_periodo','$var_cel','$var_email','$pass_encriptada','1')";
 
 
 
@@ -56,9 +58,9 @@ if ($conn->query($sql) === TRUE) {
 
 
 } else {
-      echo "<script>alert('No se pudo guardar correctamente, intentelo de nuevo!')</script>";
-        echo "<script>window.open('registro_alum.html','_self')</script>";
-   // echo "Error: " . $sql . "<br>" . $conn->error;
+      //echo "<script>alert('No se pudo guardar correctamente, intentelo de nuevo!')</script>";
+        //echo "<script>window.open('registro_alum.html','_self')</script>";
+  echo "Error: " . $sql . "<br>" . $conn->error;
 }
 $conn->close();
 }
