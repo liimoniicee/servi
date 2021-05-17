@@ -44,52 +44,57 @@ style="background-image: url('imag/bg_eadites1.jpg');
   </style>
 
         <div class="container col-lg-5 d-flex flex-column align-items-end min-vh-100">
-          <div class="col-md-4 px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
+          <div class="col-md-4 px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto text-center">
 
-            <form class="mb-2 text-center">
+          	<form method="post" action="reg_alum_mod.php" enctype="multipart/form-data">
               <h3 class="text-center mb-5">Datos personales<hr></h3>
               <div class="form-group mb-3">
                 <label for="Nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                <input type="text" name="nom" class="form-control" id="nombre" placeholder="Nombre">
               </div>
               <div class="form-group mb-3">
                 <label for="apep">Apellido paterno</label>
-                <input type="text" class="form-control" id="apep" placeholder="Apellido paterno">
+                <input type="text" name="apep" class="form-control" id="apep" placeholder="Apellido paterno">
               </div>
               <div class="form-group mb-3">
                 <label for="apem">Apellido materno</label>
-                <input type="text" class="form-control" id="apem" placeholder="Apellido materno">
+                <input type="text" name="apem" class="form-control" id="apem" placeholder="Apellido materno">
+              </div>
+              <div class="form-group mb-3">
+                <label for="apem">Celular</label>
+                <input type="number" name="cel" class="form-control" id="cel" placeholder="Numero de celular">
               </div>
               <div class="form-group mb-3">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
               </div>
               <div class="form-group mb-5">
                 <label for="password">Contrasena</label>
-                <input type="password" class="form-control" id="pass" placeholder="Contrasena">
+                <input type="password" name="contra" class="form-control" id="pass" placeholder="Contrasena">
               </div>
             <h3 class="text-center mb-5">Escolaridad<hr></h3>
             <div class="form-group mb-3">
               <label for="car">Carrera</label>
-              <input type="text" class="form-control" id="car" placeholder="Carrera">
+              <input type="text" name="car" class="form-control" id="car" placeholder="Carrera">
             </div>
             <div class="form-group mb-3">
               <label for="sem">Semestre</label>
-              <input type="text" class="form-control" id="sem" placeholder="Semestre">
+              <input type="number" name="sem" class="form-control" id="sem" placeholder="Semestre">
             </div>
             <div class="form-group mb-3">
               <label for="nc">Numero de control</label>
-              <input type="text" class="form-control" id="nc" placeholder="Numero de control">
+              <input type="text" name="ncontrol" class="form-control" id="nc" placeholder="Numero de control">
             </div>
             <div class="form-group">
               <label for="peri">Periodo</label>
-              <input type="text" class="form-control" id="peri" placeholder="Periodo">
+              <input type="number" name="periodo" class="form-control" id="peri" placeholder="Periodo">
             </div>
-          </form>
+
           <div class="mt-5 d-flex p-4 justify-content-around">
             <button type="submit" class="btn btn-lg btn-outline-primary">Registrar</button>
-            <button type="submit" class="btn btn-lg btn-outline-danger">Salir</button>
+            <input type="button" value="Salir" class="btn btn-lg btn-outline-danger" OnClick="location.href='index.html' ">
           </div>
+              </form>
         </div>
       </div>
 
