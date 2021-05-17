@@ -11,13 +11,13 @@
 
   <body>
     <!---primer menu-->
-    <nav class="navbar navbar-expand-sm " style="background-color: #0B231E">
-      <div class="container ms-auto">
-      <a href="#" class="navbar-brand mb-0 h1"></a>
+    <nav class="navbar navbar-expand-sm  navbar-dark" style="background-color: #0B231E">
+      <div class="container-fluid">
+      <a href="#" class="nav-item active mb-0 h1"></a>
         <img class="d-inline-block align-top" src="imag/logo.png" width="80" height="30" alt="">
 
       <!--activacion de boton debajo de los 560px-responsive action-->
-      <button type="button"
+      <button type="navbar-toggler"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
         class="navbar-toggler"
@@ -38,14 +38,14 @@
             <li class="nav-item active">
               <a href="#" class="nav-link text-white">Datos</a>
             </li>
-            <a href="#" class="navbar-brand mb-0 h1"></a>
-             <img class="d-inline-block align-top" src="imag/lupa.png" width="25" height="25" alt="">
+            <a href="https://www.gob.mx/busqueda" class="navbar-brand mb-0 h1">
+             <img class="d-inline-block ms-2" src="imag/lupa.png" width="25" height="25" alt=""></a>
            </ul>
          </div>
        </div>
        </nav>
 
-<!--imagenes banner-->
+<!--imagen banner-->
 <div class="container-sm">
     <ul class="row">
      <div class="col-sm m-auto ms-1 text-center">
@@ -60,31 +60,31 @@
            <div class="col-sm m-auto ms-1 me-1 text-center">
              <img href="#" src="imag\pleca-ites2.png" width="213" height="75" class="img-fluid me-5" alt="">
              </div>
-             <div class="col-sm m-auto ms-1 me-1 text-center">
-              <img href="#" style="margin-left: 80px" src="imag\user.png" width="80" height="80" class="img-fluid me-5" alt="">
-              </div>
     </ul>
   </div>
 
-<!--segundo menu-->
-  <nav class="navbar navbar-expand-sm" style="background-color: #18396a">
-    <div class="container ms-auto">
-    <a href="#" class="navbar-brand mb-0 h1"></a>
 
-    <button type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
+<!--segundo menu-->
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark" style="background-color: #18396a">
+    <div class="container-fluid ms-3 me-2">
+
+  <!--boton para nav de opciones--><button
       class="navbar-toggler"
-      aria-controls="navbarNav"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav1"
+      aria-controls="navbarNav1"
       arial-expanded="false"
       arial-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button><!--boton para nav de opciones-->
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+
+    <div class="collapse navbar-collapse" id="navbarNav1"><!--parte del boton para nav opciones-->
+      <ul class="navbar-nav navbar-left">
+        <a href="#" class="navbar-brand mb-0 h1"></a>
         <li class="nav-item active">
-          <a href="menu.html" class="nav-link active text-white">Menu</a>
+          <a href="#" class="nav-link active text-white">Menu</a>
         </li>
         <li class="nav-item active">
           <a href="documentos.html" class="nav-link text-white">Documentos</a>
@@ -96,13 +96,24 @@
           <a href="contactos.html" class="nav-link text-white">Contactos</a>
         </li>
        </ul>
-       <form class="d-flex ms-auto">
-         <a class="btn" style="background-color: #2d85cf" href="perfil.html" role="btn">Perfil</a>
-         <a class="btn" style="margin-left: 10px; background-color: #2d85cf" href="index.html" role="btn">Salir</a>
-       </form>
-     </div>
-    </div>
-   </nav>
+     </div><!--parte del boton para nav opciones-->
+     <div class="btn-group dropstart"><!--boton imagen con icono de usuario-->
+       <img src="imag/user.png"
+       id="dropdownMenuButton2"
+       height="50 px"
+       width="50 px"
+       type="button"
+       data-bs-toggle="dropdown"
+       aria-expanded="false"
+       >
+       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+         <li><a class="dropdown-item  active text-center" href="#">Perfil</a></li>
+         <li><hr class="dropdown-divider"></li>
+         <li><a class="dropdown-item text-center"  href="#">Salir</a></li>
+       </ul>
+     </div><!--boton imagen con icono de usuario-->
+   </div>
+ </nav>
 
    <!--empiezo contenido-->
 
@@ -289,124 +300,101 @@
 
 
 <!--+++++++++++++Footer-1-->
-<footer class="text-center text-lg-start p-5" style="background-color: #1B396A">
-  <!-- Grid container -->
+<footer class="text-center text-lg-start p-0" style="background-color: #1B396A">
   <div class="container p-4">
-    <!--Grid row-->
     <div class="row">
-      <!--Grid column-->
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h4 class="text-uppercase text-white">Dirección</h4>
-        <h7 class="text-uppercase text-white">
-          Blvd. Tecnológico de Los Cabos s/n, Col. Guaymitas, CP 23407
-
-        San José del Cabo, B.C.S.
-
-        Tels: 624 142 5939 /163 22 50 ext. 2001</h7>
+      <div class="col-lg-6 col-md-12 mb-1">
+        <h6 class=" text-white">Dirección</h6>
+        <p class="text-white col-8"><small>Boulevard Tecnológico de Los Cabos s/n, Colonia Guaymitas, CP23407, San José del Cabo B.C.S.</small></p>
+        <p></p>
+        <h6 class=" text-white">Contacto</h6>
+        <p class="text-white"><small>Tel. 624-14 25 939 / 624-16 32 250</small></p>
       </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h4 class="text-uppercase text-white">Enlaces</h4>
-
+      <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+        <h6 class="text-white">Enlaces</h6>
         <ul class="list-unstyled mb-0">
-          <p><li>
-          <a title="Portal de obligaciones de transparencia" href="http://portaltransparencia.gob.mx/buscador/search/search.do?method=begin" target="_blank" class="text-white">Portal de obligaciones de transparencia</a>
-        </li><p>
-          <p><li>
-            <a title="INAI" href="https://home.inai.org.mx/" class="text-white">INAI</a>
-          </li><p>
-          <p><li>
-            <a title="Buzon de sugerencias" href="http://www.itesloscabos.edu.mx/ites/index.php/quejas-y-sugerencias-ites" class="text-white">Buzon de sugerencias</a>
-          </li><p>
+          <li class="nav-item ">
+            <a class="text-link text-white"style="text-decoration:none" href="#"><small>Portal de Obligaciones de Transparencia</small></a>
+          </li>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="#"><small>INAI</small></a>
+          </li>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="#"><small>Buzón de Sugerencias</small></a>
+          </li>
         </ul>
       </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase mb-0">Links</h5>
-
+        <a href="https://goo.gl/maps/49utvn1etMmBzrUc9">
+          <img src="imag/ubicacion.png" height="230px" width="350px" type="button">
+        </a>
       </div>
-      <!--Grid column-->
     </div>
-    <!--Grid row-->
-  </div>
-  <!-- Grid container -->
-  <div class="container p-4">
-    <!--Grid row-->
-    <div class="row">
-      <!--Grid column-->
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h4 class="text-uppercase text-white">Contacto</h4>
-        <h7 class="text-uppercase text-white">Tel. 624-14 25 939 / 624-16 32 250</h7>
-      </div>
-      <!--Grid column-->
-    </div>
-    <!--Grid row-->
   </div>
 </footer>
 
 <!--+++++++++++++++Footer-2-->
-<!--<div class="text-center text-lg-start p-5 mt-3" style="background-color: rgba(36,92,79,0.9);">
+<footer class="text-center mt-3 text-lg-start p-0" style="background-color: #0B231E">
   <div class="container p-4">
     <div class="row">
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Dirección</h5>
-
-        <p>
-          Blvd. Tecnológico de Los Cabos s/n, Col. Guaymitas, CP 23407
-
-          San José del Cabo, B.C.S.
-
-          Tels: 624 142 5939 /163 22 50 ext. 2001
-        </p>
+      <div class="col-lg-3 col-md-4 mb-1">
+        <img src="imag/Logo_128x50.svg" height="90 px" width="240 px" type="button">
       </div>
-
-
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Links</h5>
-
+      <div class="col-lg-2 col-md-4 mb-1">
+        <h5 class="text-white">Enlaces</h5>
         <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#!" class="text-dark">Link 1</a>
+          <li class="nav-item ">
+            <a class="text-link text-white"style="text-decoration:none" href="https://participa.gob.mx/">Participa</a>
           </li>
-          <li>
-            <a href="#!" class="text-dark">Link 2</a>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="https://www.gob.mx/publicaciones">Publicaciones Oficiales</a>
           </li>
-          <li>
-            <a href="#!" class="text-dark">Link 3</a>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="http://www.ordenjuridico.gob.mx/#gsc.tab=0">Marco Jurídico</a>
           </li>
-          <li>
-            <a href="#!" class="text-dark">Link 4</a>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="https://consultapublicamx.inai.org.mx/vut-web/faces/view/consultaPublica.xhtml#inicio">Plataforma Nacional de Transparencia</a>
           </li>
         </ul>
       </div>
-
-
-
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase mb-0">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!" class="text-dark">Link 1</a>
+      <div class="col-lg-3 col-md-4 mb-1">
+        <p class="text-white h6">¿Qué es gob.mx?</p>
+        <a class="text-white " style="text-decoration:none" >Es el portal único de trámites, información y participación ciudadana.<a class="text-link text-white"style="text-decoration:none" href="#"> Leer más</a> </a>
+        <p></p>
+        <ul class="list-unstyled mb-0">
+          <li class="nav-item ">
+            <a class="text-link text-white"style="text-decoration:none" href="https://datos.gob.mx/">Portal de datos abiertos</a>
           </li>
-          <li>
-            <a href="#!" class="text-dark">Link 2</a>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="https://www.gob.mx/accesibilidad">Declaración de accesibilidad</a>
           </li>
-          <li>
-            <a href="#!" class="text-dark">Link 3</a>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="https://www.gob.mx/aviso_de_privacidad">Aviso de privacidad integral</a>
           </li>
-          <li>
-            <a href="#!" class="text-dark">Link 4</a>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="https://www.gob.mx/privacidadsimplificado">Aviso de privacidad simplificado</a>
+          </li>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="https://www.gob.mx/terminos">Términos y Condiciones</a>
+          </li>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="https://www.gob.mx/terminos#medidas-seguridad-informacion">Política de seguridad</a>
+          </li>
+          <li class="nav-item ">
+            <a class="text-link text-white "style="text-decoration:none" href="https://www.gob.mx/sitemap">Mapa de sitio</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-8 mb-0 text-align-right">
+        <ul class="list-unstyled mb-0">
+          <li class="nav-item ">
+            <a class="text-link text-white"style="text-decoration:none" href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54">Denuncia contra servidores públicos</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
-</footer>-->
+</footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
