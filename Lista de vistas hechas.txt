@@ -1,0 +1,32 @@
+
+
+LADO ALUMNO--------------------
+
+login (Listo)
+
+Menu (progreso)
+
+Registro (progreso)
+
+Documentos (progeso)
+
+Documentos Completos (progeso)
+
+contactos (faltan detalles)
+
+Perfil (faltan detalles)
+
+
+LADO ADMINISTRADOR---------------------
+
+login-admin (proceso)
+
+Registro admin (progreso)
+
+Menu admin(progreso)
+
+Documentos y control de admin(progeso)
+
+contactos admin(faltan detalles)
+
+Perfil admin(faltan detalles)
