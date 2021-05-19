@@ -25,8 +25,8 @@ echo "NumeroControl:".$var_ncontrol = $_POST['ncontrol'];
 echo "<br>";
 echo "Periodo:".$var_periodo = $_POST['periodo'];
 
-
-$validar="SELECT correo_alu FROM alumno WHERE correo_alu='$var_email'";
+//-------------- Valida que el correo no haya sido registrado anteriormente
+$validar="SELECT correo FROM usuario WHERE correo='$var_email'";
 //if(mysqli_num_rows($nuevo_usuario)>0)
 $resultado = $conn->query($validar);
 if ($resultado->num_rows > 0){
@@ -39,10 +39,23 @@ if ($resultado->num_rows > 0){
 else
 {
 
+//------- inserta el usuario
+$inserta_usu = "INSERT INTO usuario(nombre, apellido_materno, apellido_paterno, teleno, correo, contra)
+VALUES ('$var_nombre' , '$var_apellidop' , '$var_apellidom' ,'$var_cel','$var_email','$pass_encriptada')";
 
-$sql = "INSERT INTO alumno (num_control_alu, nom_alu, ape_pat_alu, ape_mat_alu, carrera_alu, semestre_alu, periodo_alu, telefono_alu, correo_alu, contra_alu, status_alu)
-VALUES ('$var_ncontrol', '$var_nombre' , '$var_apellidop' , '$var_apellidom' ,'$var_carrera','$var_semestre','$var_periodo','$var_cel','$var_email','$pass_encriptada','1')";
 
+
+if ($conn->query($inserta_usu) === TRUE) {
+
+  //------- consulta ultimo usuario para relacionarlo con la tabla alumno
+$consultausu = "select * from usuario order by id desc;"
+$usu_alu = $conn->query($consultausu);
+
+$inserta_alu = "INSERT INTO alumno(num_control_alu, carrera_alu, semestre_alu, periodo_alu, status_alu)
+VALUES ('$var_ncontrol','$var_carrera','$var_semestre','$var_periodo','1')";
+} else {
+
+}
 
 
 if ($conn->query($sql) === TRUE) {

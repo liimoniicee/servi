@@ -7,7 +7,7 @@
 
     include'conexion.php';
 
-$query = "SELECT contra_alu, correo_alu FROM alumno where correo_alu ='$var_email' and contra_alu = '$var_contra' ";
+$query = "SELECT contra, correo FROM usuario where correo ='$var_email' and contra = '$var_contra' ";
 $resultado = $conn->query($query);
 
 
