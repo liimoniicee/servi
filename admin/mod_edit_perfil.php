@@ -2,9 +2,6 @@
   <!-- Bootstrap core CSS     -->
   <link href= "../assets/css/bootstrap.min.css" rel="stylesheet" />
 
-  <
-
-</head>
 
 <script src= "../assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src= "../assets/js/jquery-ui.min.js" type="text/javascript"></script>
@@ -12,15 +9,24 @@
 <script src= "../assets/js/bootstrap.min.js" type="text/javascript"></script>
 
 
-<!-- Promise Library for SweetAlert2 working on IE -->
-<script src= "../assets/js/es6-promise-auto.min.js"></script>
-
 <!-- Sweet Alert 2 plugin -->
-<script src= "../assets/js/sweetalert2.js"></script>
+<script src="../assets/js/sweetalert2.js"></script>
+<script src="../assets/js/swal-forms.js"></script>
+<script src="../assets/js/sweet-alert.js"></script>
+<script src="../assets/js/sweetalert2.all.min.js"></script>
+<script src="../assets/js/sweetalert2.all.js"></script>
+</head>
+
   <?php
 
 
   require_once"../conexion.php";
+
+    //$_POST['foto'];
+   	$archivo = $_FILES ['foto']['tmp_name'];
+   	$destino = "../assets/img/". $_FILES['foto']['name'];
+   	move_uploaded_file($archivo,$destino);
+
 
   $var_nombre     = $_POST['nombre'];
   $var_apellidop  = $_POST['apep'];
@@ -40,7 +46,8 @@ $var_id = 13;
   														Apellido_Materno='$var_apellidom',
   														Correo='$var_correo',
   														Telefono='$var_tel',
-  														Contra='$pass_encriptada'
+  														Contra='$pass_encriptada',
+                              Img_Perfil='$destino'
                               WHERE Id_Usuario = 13";
 
 
@@ -62,12 +69,13 @@ $var_id = 13;
         </body>
          <?php
   	}else {
+      //echo "Error: " . $sql . "<br>" . $conn->error;
       ?>
        <body>
        <script>
        swal({
      title: "Error!",
-     text: "Algo esta mal",
+     text: "Algo salio mal",
      type: "error"
      }).then(function() {
      // Redirect the user
@@ -77,8 +85,8 @@ $var_id = 13;
            </script>
     </body>
        <?php
-  	}
 
+}
   		$conn->close();
 
   ?>

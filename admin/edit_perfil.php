@@ -43,6 +43,7 @@ $id = 13;
             $var_tel    =     $row['Telefono'];
             $var_contra   =     $row['Contra'];
             $var_numc   =     $row['Num_Control_Emp'];
+            $var_img_usu   =     $row['Img_Perfil'];
 
           }
 
@@ -159,9 +160,17 @@ $id = 13;
 <h3>Editar perfil</h3>
 </br>
 
+<form action="mod_edit_perfil.php" method="post" enctype="multipart/form-data">
+  <div class="form" style="padding: 20px">
+        <img src="<?php echo $var_img_usu ?>" alt="..." class="rounded mx-auto d-block" style="width:200px; height: 200px; padding:20px;"></img>
 
+                <!--Almacena la imagen seleccionada en el servidor donde se encuentra usando validaciones que procporciona inpit-->
+                <div class="col-md-4 mx-auto">
+        <input name="foto" class="form-control"  type="file" required  accept="image/gif, image/jpeg, image/png"> </input>
+      </br>
+</div>
+</div>
 
-<form method="post" action="mod_edit_perfil.php">
   <div class="row">
     <div class="form-group col-md-4">
       <label for="input">Nombre</label>
@@ -200,7 +209,7 @@ $id = 13;
   </div>
 </br>
 
-  <button type="submit" class="btn btn-primary">Guardar cambios</button>
+  <button type="submit"  class="btn btn-primary">Guardar cambios</button>
 </form>
 
 
